@@ -136,9 +136,9 @@ end
 function f.schreibAutorun()
   local d = io.open("/autorun.lua", "w")
   d:write([[
-  -- pastebin run -f YVqKFnsP
-  -- nexDHD von Nex4rius
-  -- https://github.com/Asher9/Asher9-s-Programms/tree/master/nexDHD
+  -- pastebin run -f B5pvDmYi
+  -- openDHD from Asher9
+  -- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD
 
   local shell = shell or require("shell")
   local alterPfad
@@ -159,7 +159,7 @@ function f.schreibAutorun()
       print(grund)
       os.sleep(2)
       if require then
-          if loadfile("/bin/wget.lua")("-f", "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/master/nexDHD/installieren.lua", "/installieren.lua") then
+          if loadfile("/bin/wget.lua")("-f", "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/master/openDHD/installieren.lua", "/installieren.lua") then
               loadfile("/installieren.lua")()
           end
       else
@@ -292,9 +292,9 @@ if versionTyp == nil then
       loadfile("/bin/rm.lua")("-v", "/update", "-r")
       local d = io.open("/autorun.lua", "w")
       d:write([[
-        -- pastebin run -f YVqKFnsP
-        -- nexDHD von Nex4rius
-        -- https://github.com/Asher9/Asher9-s-Programms/tree/master/nexDHD
+        -- pastebin run -f B5pvDmYi
+        -- openDHD from Asher9
+        -- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD
         
         wget("-f", f.Pfad(versionTyp) .. "installieren.lua", "/installieren.lua")
         loadfile("/installieren.lua")()
@@ -304,9 +304,9 @@ if versionTyp == nil then
       shell.run("delete /update")
       local d = io.open("/startup", "w")
       d:write([[
-        -- pastebin run -f YVqKFnsP
-        -- nexDHD von Nex4rius
-        -- https://github.com/Asher9/Asher9-s-Programms/tree/master/nexDHD
+        -- pastebin run -f B5pvDmYi
+        -- openDHD from Asher9
+        -- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD
         
         shell.run("pastebin run -f YVqKFnsP")
       ]])
