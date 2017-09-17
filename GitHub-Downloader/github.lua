@@ -237,7 +237,7 @@ if not ergebnis then
     if grund == "not enough memory" and option.f then
         if not link then link = "" end
         if not sha then sha = "" end
-        os.execute(string.format("pastebin run -f MHq2tN5B -o %s %s %s %s", name, repo, tree, link, sha))
+        os.execute(string.format("pastebin run -f rmWVAGLM -o %s %s %s %s", name, repo, tree, link, sha))
     end
 end
 
