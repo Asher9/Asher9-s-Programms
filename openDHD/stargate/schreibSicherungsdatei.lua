@@ -1,4 +1,4 @@
--- pastebin run -f 
+-- pastebin run -f B5pvDmYi
 -- openDHD from Asher9
 -- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD
 
@@ -74,9 +74,9 @@ if type(NEU) == "table" then
   check("boolean", "installieren")
   
   local f = io.open ("/einstellungen/Sicherungsdatei.lua", "w")
-  f:write('-- pastebin run -f YVqKFnsP\n')
+  f:write('-- pastebin run -f B5pvDmYi\n')
   f:write('-- openDHD from Asher9\n')
-  f:write('-- https://github.com/Asher9/Asher9-s-Programms/tree/master/nexDHD\n--\n')
+  f:write('-- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD\n--\n')
   f:write('-- ' .. tostring(sprachen.speichern) .. '\n')
   f:write('-- ' .. tostring(sprachen.schliessen) .. '\n--\n\n')
   f:write('return {\n')
