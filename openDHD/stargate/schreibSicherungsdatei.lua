@@ -31,7 +31,7 @@ local function reset()
     Sprache        = "deutsch / english / russian / czech",
     side           = "unten, oben, hinten, vorne, rechts oder links",
     autoUpdate     = "aktiviere automatische Aktualisierungen",
-    Port           = "standard 800",
+    Port           = "standard 645",
     debug          = "zum debuggen",
     nichtsAendern  = "verändere nichts ab hier",
     StargateName   = "der Name dieses Stargates",
