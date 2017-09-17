@@ -308,7 +308,7 @@ if versionTyp == nil then
         -- openDHD from Asher9
         -- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD
         
-        shell.run("pastebin run -f YVqKFnsP")
+        shell.run("pastebin run -f B5pvDmYi")
       ]])
     end
     d:close()
