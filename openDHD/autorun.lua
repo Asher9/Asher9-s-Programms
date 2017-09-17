@@ -1,4 +1,4 @@
--- pastebin run -f 
+-- pastebin run -f B5pvDmYi
 -- openDHD from Asher_9
 -- 
 
@@ -33,11 +33,11 @@ if not ergebnis then
     print(grund)
     os.sleep(2)
     if require then
-        if loadfile("/bin/wget.lua")("-f", "https://raw.githubusercontent.com/Nex4rius/Nex4rius-Programme/master/nexDHD/installieren.lua", "/installieren.lua") then
+        if loadfile("/bin/wget.lua")("-f", "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/master/openDHD/installieren.lua", "/installieren.lua") then
             loadfile("/installieren.lua")()
         end
     else
-        shell.run("pastebin run -f YVqKFnsP")
+        shell.run("pastebin run -f B5pvDmYi")
     end
 end
 
