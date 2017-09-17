@@ -1,4 +1,4 @@
--- pastebin run -f 
+-- pastebin run -f B5pvDmYi
 -- openDHD fromAsher9
 -- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD
 
@@ -253,7 +253,7 @@ end
 
 function f.checkOpenOS()
   if OC then
-    local OpenOS_Version = "OpenOS 1.6.7"
+    local OpenOS_Version = "OpenOS 1.6.8"
     if wget("-fQ", "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/master/OpenOS-Version", "/einstellungen/OpenOS-Version") then
       local d = io.open("/einstellungen/OpenOS-Version", "r")
       OpenOS_Version = d:read()
@@ -439,8 +439,8 @@ end
 
 function f.checkDateien()
   local d = io.open ("/bin/stargate.lua", "w")
-  d:write('-- pastebin run -f YVqKFnsP\n')
-  d:write('-- von Nex4rius\n')
+  d:write('-- pastebin run -f B5pvDmYi\n')
+  d:write('-- openDHD from Asher9\n')
   d:write('-- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD\n')
   d:write('\n')
   d:write('if not pcall(loadfile("/autorun.lua"), require("shell").parse(...)[1]) then\n')
@@ -565,7 +565,7 @@ function f.mainCheck()
       end
     end
   end
-  print("\nnexDHD")
+  print("\nopenDHD")
   print(sprachen.laden or "\nLaden...")
   Sicherung.installieren = false
   schreibSicherungsdatei(Sicherung)
