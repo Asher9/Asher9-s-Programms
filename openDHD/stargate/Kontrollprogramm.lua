@@ -1,4 +1,4 @@
--- pastebin run -f 
+-- pastebin run -f B5pvDmYi
 -- openDHD from Asher9
 -- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD
 
@@ -217,7 +217,7 @@ function f.Logbuch_schreiben(name, adresse, richtung)
   end
   rest[1] = {name, adresse, richtung}
   local d = io.open("/einstellungen/logbuch.lua", "w")
-  d:write('-- pastebin run -f YVqKFnsP\n')
+  d:write('-- pastebin run -f B5pvDmYi\n')
   d:write('-- openDHD from Asher9\n')
   d:write('-- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD\n--\n')
   d:write('return {\n')
@@ -234,7 +234,7 @@ end
 
 function f.schreibeAdressen()
   local d = io.open("/einstellungen/adressen.lua", "w")
-  d:write('-- pastebin run -f YVqKFnsP\n')
+  d:write('-- pastebin run -f B5pvDmYi\n')
   d:write('-- openDHD from Asher9\n')
   d:write('-- https://github.com/Asher9/Asher9-s-Programms/tree/master/openDHD\n--\n')
   d:write('-- ' .. sprachen.speichern .. '\n')
@@ -1898,5 +1898,5 @@ if v.update == "ja" or v.update == "beta" then
   else
     pcall(update, v.update, Sicherung)
   end
-  os.execute("pastebin run -f YVqKFnsP " .. v.update)
+  os.execute("pastebin run -f B5pvDmYi " .. v.update)
 end
