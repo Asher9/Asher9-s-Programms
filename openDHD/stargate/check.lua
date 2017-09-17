@@ -253,7 +253,7 @@ end
 
 function f.checkOpenOS()
   if OC then
-    local OpenOS_Version = "OpenOS 1.6.8"
+    local OpenOS_Version = "OpenOS 1.6.1"
     if wget("-fQ", "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/master/OpenOS-Version", "/einstellungen/OpenOS-Version") then
       local d = io.open("/einstellungen/OpenOS-Version", "r")
       OpenOS_Version = d:read()
