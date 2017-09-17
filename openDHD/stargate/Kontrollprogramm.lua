@@ -1881,7 +1881,7 @@ function f.main()
       os.sleep(5)
     end
   end
-  f.irisOpen()
+  f.irisClose()
   f.beendeAlles()
 end
 
