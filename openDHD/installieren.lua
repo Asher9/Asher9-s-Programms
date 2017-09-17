@@ -163,7 +163,7 @@ function f.schreibAutorun()
               loadfile("/installieren.lua")()
           end
       else
-          shell.run("pastebin run -f YVqKFnsP")
+          shell.run("pastebin run -f B5pvDmYi")
       end
   end
   
@@ -258,7 +258,7 @@ function f.installieren(versionTyp)
     print()
   end
   if OC then
-    kopieren("/autorun.lua", "/bin/nexDHD.lua")
+    kopieren("/autorun.lua", "/bin/openDHD.lua")
     kopieren("/autorun.lua", "/bin/stargate.lua")
   end
   if updateKomplett then
