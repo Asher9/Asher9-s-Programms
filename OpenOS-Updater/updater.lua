@@ -37,7 +37,7 @@ function Funktion.Pfad(api)
     if api then
         return "https://api.github.com/repos/MightyPirates/OpenComputers/git/trees/285f9c8fa60abf54dd6b199c895c9e07943c6d1d?recursive=1"
     else
-        return "https://raw.githubusercontent.com/MightyPirates/OpenComputers/master-MC1.10/src/main/resources/assets/opencomputers/loot/openos"
+        return "https://raw.githubusercontent.com/MightyPirates/OpenComputers/master-MC1.10/src/main/resources/assets/opencomputers/loot/openos/"
     end
 end
 
