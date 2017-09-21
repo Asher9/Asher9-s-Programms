@@ -278,17 +278,17 @@ function f.checkOpenOS()
         if Version_alt[i] ~= Version_neu[i] then
           if type(Version_alt[i]) == "number" and type(Version_neu[i]) == "number" then
             if Version_neu[i] > Version_alt[i] then
-              neuer = false
+              neuer = true
             end
           else
-            neuer = true
+            neuer = false
           end
         end
       end
       gpu.setForeground(Farben.roteFarbe)
       print("\nOpenOS Version:        " .. _OSVERSION .. " -> " .. OpenOS_Version .. "\n")
-      if neuer and false == true then --deaktiviert
-        if Sicherung.autoUpdate and false == true then
+      if neuer == true then
+        if Sicherung.autoUpdate == true then
           print("Update OpenOS")
           os.sleep(3)
           wget("-fQ", "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/master/OpenOS-Updater/updater.lua", "/updater.lua")
