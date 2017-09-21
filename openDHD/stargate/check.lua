@@ -271,20 +271,27 @@ function f.checkOpenOS()
         end
         return output
       end
-      local Version_neu = split(OpenOS_Version)
-      local Version_alt = split(_OSVERSION)
-      local neuer
-      for i in pairs(Version_neu) do
-        if Version_alt[i] ~= Version_neu[i] then
-          if type(Version_alt[i]) == "number" and type(Version_neu[i]) == "number" then
-            if Version_neu[i] > Version_alt[i] then
-              neuer = true
-            end
-          else
-            neuer = false
-          end
+      --local Version_neu = split(OpenOS_Version)
+      --local Version_alt = split(_OSVERSION)
+      --local neuer
+      --for i in pairs(Version_neu) do
+        --if Version_alt[i] ~= Version_neu[i] then
+          --if type(Version_alt[i]) == "number" and type(Version_neu[i]) == "number" then
+            --if Version_neu[i] > Version_alt[i] then
+              --neuer = true
+            --end
+          --else
+            --neuer = false
+          --end
+        --end
+      --end
+      if _OSVERSION ~= OpenOS_Version then
+        if OpenOS_Version > _OSVERSION then
+          neuer = true
         end
-      end
+      else
+        neuer = false
+      end  
       gpu.setForeground(Farben.roteFarbe)
       print("\nOpenOS Version:        " .. _OSVERSION .. " -> " .. OpenOS_Version .. "\n")
       if neuer == true then
