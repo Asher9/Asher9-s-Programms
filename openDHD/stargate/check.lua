@@ -278,7 +278,7 @@ function f.checkOpenOS()
         if Version_alt[i] ~= Version_neu[i] then
           if type(Version_alt[i]) == "number" and type(Version_neu[i]) == "number" then
             if Version_neu[i] > Version_alt[i] then
-              neuer = true
+              neuer = false
             end
           else
             neuer = true
