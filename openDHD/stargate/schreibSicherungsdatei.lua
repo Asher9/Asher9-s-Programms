@@ -27,6 +27,7 @@ local function reset()
     schliessen     = 'zum schließen drücke "Strg + W"',
     autoclosetime  = "in Sekunden -- false für keine automatische Schließung",
     IDC            = "Iris Deaktivierungscode",
+	time           = "5",
     RF             = "zeige Energie in RF anstatt in EU",
     Sprache        = "deutsch / english / russian / czech",
     side           = "unten, oben, hinten, vorne, rechts oder links",
@@ -64,6 +65,7 @@ if type(NEU) == "table" then
   end
   check("string" , "StargateName")
   check("string" , "IDC")
+  check("number" , "time")
   check("boolean", "RF")
   check("string" , "Sprache")
   check("string" , "side")
@@ -86,6 +88,7 @@ if type(NEU) == "table" then
     f:write('  autoclosetime = '  .. tostring(Sicherung.autoclosetime)..  ', -- ' .. tostring(sprachen.autoclosetime) .. '\n')
   end
   f:write('  IDC           = "' .. tostring(Sicherung.IDC)          .. '", -- ' .. tostring(sprachen.IDC)           .. '\n')
+  f:write('  time          = '  .. tostring(Sicherung.time)         ..  ', -- Countdown for self destruction\n')
   f:write('  RF            = '  .. tostring(Sicherung.RF)           ..  ', -- ' .. tostring(sprachen.RF)            .. '\n')
   f:write('  Sprache       = "' .. tostring(Sicherung.Sprache)      .. '", -- deutsch / english / russian / czech\n')
   f:write('  side          = "' .. tostring(Sicherung.side)         .. '", -- ' .. tostring(sprachen.side)          .. '\n')
