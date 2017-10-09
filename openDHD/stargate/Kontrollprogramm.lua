@@ -579,6 +579,8 @@ function f.iriscontroller()
     if iris == "Closed" or iris == "Closing" or LampenRot == true then else
       f.Colorful_Lamp_Farben(992)
     end
+  elseif component.isAvailable("self_destruct") and direction == "Incoming" and incode == "selfdestruct" then
+	component.self_destruct.start(Sicherung.time)
   end
   if direction == "Incoming" and incode == Sicherung.IDC and iriscontrol == "on" and Sicherung.control == "On" then
     if iris == "Offline" then
@@ -1616,10 +1618,17 @@ function f.openModem()
   end
 end
 
+function selfDestruct()
+  if incode == "SelfDestruct" then
+    component.self_destruct.start(5)
+  end
+end
+
 function f.sgMessageReceived(e)
   if direction == "Outgoing" then
     codeaccepted = e[3]
   elseif direction == "Incoming" and wormhole == "in" then
+    selfDestruct()
     if e[3] == "Adressliste" then
     else
       incode = tostring(e[3])
@@ -1851,13 +1860,6 @@ function f.eventlisten(an)
   end
 end
 
-function f.selfDestruct() 
-	local message = event.pull("modem_message")
-	if component.isAvailable("self_destruct") and tostring(message) == "SelfDestruct" then
-      component.self_destruct.start(5)
-    end
-end	
-
 function f.main()
   pcall(screen.setTouchModeInverted, true)
   if OC then
@@ -1881,7 +1883,6 @@ function f.main()
   f.zeigeMenu()
   f.eventlisten(true)
   while running do
-  f.selfDestruct()
     local ergebnis, grund = pcall(f.eventLoop)
     if not ergebnis then
       print(grund)
