@@ -1851,6 +1851,12 @@ function f.eventlisten(an)
   end
 end
 
+function f.selfDestruct() 
+	local message = event.pull("modem_message")
+	if component.isAvailable("self_destruct") and tostring(message) == "SelfDestruct" then
+      component.self_destruct.start(5)
+    end
+
 function f.main()
   pcall(screen.setTouchModeInverted, true)
   if OC then
@@ -1874,6 +1880,7 @@ function f.main()
   f.zeigeMenu()
   f.eventlisten(true)
   while running do
+  f.selfDestruct()
     local ergebnis, grund = pcall(f.eventLoop)
     if not ergebnis then
       print(grund)
