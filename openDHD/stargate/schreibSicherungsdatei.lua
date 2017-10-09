@@ -18,7 +18,7 @@ if type(ALT) ~= "table" then ALT = {} end
 if standard then
   standard = standard()
 else
-  standard = {autoclosetime = 60, IDC = "", time = "", RF = false, Sprache = "", side = "unten", autoUpdate = true, StargateName = "", Port = 645, debug = false, control = "On", installieren = false}
+  standard = {autoclosetime = 60, IDC = "", time = "5", RF = false, Sprache = "", side = "unten", autoUpdate = true, StargateName = "", Port = 645, debug = false, control = "On", installieren = false}
 end
 
 local function reset()
@@ -27,7 +27,7 @@ local function reset()
     schliessen     = 'zum schließen drücke "Strg + W"',
     autoclosetime  = "in Sekunden -- false für keine automatische Schließung",
     IDC            = "Iris Deaktivierungscode",
-    time           = "5",
+    time           = "second for self destruction",
     RF             = "zeige Energie in RF anstatt in EU",
     Sprache        = "deutsch / english / russian / czech",
     side           = "unten, oben, hinten, vorne, rechts oder links",
