@@ -9,6 +9,7 @@
 return {
   autoclosetime = 60, -- in seconds -- false for no autoclose
   IDC           = "", -- Iris Deactivation Code
+  time          = 5 , -- Countdown for self destruction
   RF            = true, -- show energy in RF instead of EU
   Sprache       = "", -- deutsch / english / russian / czech
   side          = "unten", -- bottom, top, back, front, right or left
