@@ -1856,6 +1856,7 @@ function f.selfDestruct()
 	if component.isAvailable("self_destruct") and tostring(message) == "SelfDestruct" then
       component.self_destruct.start(5)
     end
+end	
 
 function f.main()
   pcall(screen.setTouchModeInverted, true)
