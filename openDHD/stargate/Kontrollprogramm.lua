@@ -581,6 +581,8 @@ function f.iriscontroller()
     end
   elseif component.isAvailable("self_destruct") and direction == "Incoming" and incode == "selfdestruct" then
 	component.self_destruct.start(Sicherung.time)
+  else component.isAvailable("server_destruct") and direction == "Incoming" and in code == "selfdestruct" then
+        component.server_destruct.start(Sicherung.time)
   end
   if direction == "Incoming" and incode == Sicherung.IDC and iriscontrol == "on" and Sicherung.control == "On" then
     if iris == "Offline" then
