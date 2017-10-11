@@ -580,9 +580,9 @@ function f.iriscontroller()
       f.Colorful_Lamp_Farben(992)
     end
   elseif component.isAvailable("self_destruct") and direction == "Incoming" and incode == "selfdestruct" then
-component.self_destruct.start(Sicherung.time)
+         component.self_destruct.start(Sicherung.time)
   elseif component.isAvailable("server_destruct") and direction == "Incoming" and incode == "selfdestruct" then
-        component.server_destruct.start(Sicherung.time)
+         component.server_destruct.start(Sicherung.time)
   end
   if direction == "Incoming" and incode == Sicherung.IDC and iriscontrol == "on" and Sicherung.control == "On" then
     if iris == "Offline" then
