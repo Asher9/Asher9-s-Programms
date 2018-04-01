@@ -652,7 +652,7 @@ function f.main()
       hilfe -> zeige diese Nachricht nochmal]==])
   else
     if f.checkKomponenten() then
-      f.checkOpenOS()
+      --f.checkOpenOS()
       f.mainCheck()
     else
       print("\n")
