@@ -58,7 +58,7 @@ function selectBranch()
 		relUrl = "https://raw.githubusercontent.com/ThorsCrafter/Reactor-and-Turbine-control-program/"..branch.."/turbineControl_v2/src/"
 		betaVersion()
 	else
-		if installLang == "de" then print("Ungueltige Eingabe!")
+		if installLang == "de" then print("Ungültige Eingabe!")
 		elseif installLang == "en" then print("Invalid input!") end
 		sleep(2)
 		selectBranch()
