@@ -71,7 +71,7 @@ if not update then
   --Description
   term.clear()
   term.setCursorPos(1,1)
-  print("Reactor- and Turbine control by Thor_s_Crafter")
+  print("Reactor- and Turbine control by Asher9")
   print("Version 2.6")
   print()
   print("About this program:")
