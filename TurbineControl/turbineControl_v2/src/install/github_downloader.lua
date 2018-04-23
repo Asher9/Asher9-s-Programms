@@ -51,11 +51,11 @@ function selectBranch()
 	local input = read()
 	if input == "1" then
 		branch = "master"
-		relUrl = "https://raw.githubusercontent.com/ThorsCrafter/Reactor-and-Turbine-control-program/"..branch.."/turbineControl_v2/src/"
+		relUrl = "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/"..branch.."/TurbineControl/turbineControl_v2/src/"
 		releaseVersion()
 	elseif input == "2" then
 		branch = "beta"
-		relUrl = "https://raw.githubusercontent.com/ThorsCrafter/Reactor-and-Turbine-control-program/"..branch.."/turbineControl_v2/src/"
+		relUrl = "https://raw.githubusercontent.com/Asher9/Asher9-s-Programms/"..branch.."/TurbineControl/turbineControl_v2/src/"
 		betaVersion()
 	else
 		if installLang == "de" then print("Ungültige Eingabe!")
