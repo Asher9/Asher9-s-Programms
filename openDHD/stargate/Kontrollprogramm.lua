@@ -1188,6 +1188,7 @@ end
 
 function f.dial(name, adresse)
   if state == "Idle" then
+    sg.closeIris()
     remoteName = name
     f.zeigeNachricht(sprachen.waehlen .. "<" .. string.sub(remoteName, 1, xVerschiebung + 12) .. "> <" .. adresse .. ">")
   end
@@ -1195,7 +1196,6 @@ function f.dial(name, adresse)
   wormhole = "out"
   local ok, ergebnis = sg.dial(adresse)
   if ok == nil then
-    sg.closeIris()
     if string.sub(ergebnis, 0, 20) == "Stargate at address " then
       local AdressEnde = string.find(string.sub(ergebnis, 21), " ") + 20
       ergebnis = string.sub(ergebnis, 0, 20) .. "<" .. f.getAddress(string.sub(ergebnis, 21, AdressEnde - 1)) .. ">" .. string.sub(ergebnis, AdressEnde)
