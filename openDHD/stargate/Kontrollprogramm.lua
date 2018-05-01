@@ -1271,10 +1271,10 @@ function Taste.d()
   f.zeigeHier(Taste.Koordinaten.d_X + 2, Taste.Koordinaten.d_Y, "D " .. sprachen.abschalten, 0)
   if state == "Connected" and direction == "Incoming" then
     sg.disconnect()
-    sg.openIris()
     sg.sendMessage("Request: Disconnect Stargate")
     f.zeigeNachricht(sprachen.senden .. sprachen.aufforderung .. ": " .. sprachen.stargateAbschalten .. " " .. sprachen.stargateName)
   else
+    sg.openIris()
     sg.disconnect()
     if state == "Idle" then else
       f.zeigeNachricht(sprachen.stargateAbschalten .. " " .. sprachen.stargateName)
