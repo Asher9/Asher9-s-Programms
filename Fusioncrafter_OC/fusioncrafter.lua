@@ -4,7 +4,7 @@
 
 local transposer = require("component").transposer
 local config = require("config")
-
+local term = term or require("term")
 
 -- Load side mappings from config
 local input = config.inventories.input
@@ -167,6 +167,7 @@ end
 
 -- The fun starts here
 local function main()
+  term.clear()
   printHello()
 
   print("Ready! Waiting for craftable recipes")
