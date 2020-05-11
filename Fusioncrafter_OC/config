@@ -67,11 +67,11 @@ config.recipes = {
     core = "draconicevolution:chaos_shard"
   },
   {
-    output = { ["draconicevolution:chaotic_core"] = 1 },
+    output = { ["solarflux:solar_panel_chaotic"] = 1 },
     input = {
       ["draconicevolution:chaotic_core"] = 1,
       ["draconicevolution:awakened_core"] = 4,
-      ["solarflux::solar_panel_draconic"] = 4
+      ["solarflux:solar_panel_draconic"] = 4
     },
     core = "draconicevolution:chaotic_core"
   },
