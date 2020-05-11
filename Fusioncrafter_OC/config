@@ -58,6 +58,15 @@ config.recipes = {
     core = "draconicevolution:draconium_block"
   },
   {
+    output = { ["draconicevolution:chaotic_core"] = 1 },
+    input = {
+      ["draconicevolution:chaos_shard"] = 1,
+      ["draconicevolution:awakened_core"] = 4,
+      ["draconicevolution:draconic_ingot"] = 4
+    },
+    core = "draconicevolution:chaotic_core"
+  },
+  {
     output = { ["draconicevolution:awakened_core"] = 1 },
     input = {
       ["draconicevolution:wyvern_core"] = 4,
