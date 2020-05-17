@@ -5,6 +5,10 @@
 local transposer = require("component").transposer
 local config = require("config")
 local term = term or require("term")
+local component = require("component")
+local computer = require("computer")
+local sides = require("sides")
+local rs = component.redstone
 
 -- Load side mappings from config
 local input = config.inventories.input
@@ -164,6 +168,13 @@ local function checkCrafting()
   os.sleep(2)
 end
 
+local function checkReboot()
+  if rs.getInput(sides.right) >= 1 then
+    computer.shutdown(true)
+  else
+    return
+  end
+end  
 
 -- The fun starts here
 local function main()
@@ -173,6 +184,7 @@ local function main()
   print("Ready! Waiting for craftable recipes")
   while true do
     checkCrafting()
+    checkReboot()
   end  
 end
 
