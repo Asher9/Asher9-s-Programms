@@ -214,7 +214,7 @@ function doUpdate(toVer,branch)
 
 			if event == "key" then
 
-				if p1 == 36 or p1 == 21 then
+				if p1 == 74 or p1 == 90 then
 					shell.run("/reactor-turbine-program/install/installer.lua update "..branch)
 					out = true
 					break
